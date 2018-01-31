@@ -9,17 +9,218 @@ html lang='en'
     body
         header
           .row
-            .logo class = "col-md-4"
+            .logo class="col-md-4"
               img src="" alt="" logo
-            nav.menu class = "col-md-7"
+            nav.menu class="col-md-7"
               - menu_arr = ['Home','About us', 'Portfolio', 'Features', 'Blog', 'Pricing', 'Shortcodes','Contact']
               - menu_arr.each do |item|
                 a href="##{item}" #{item}
-            .adittion class = "col-md-1"
+            .adittion class="col-md-1"
               a class="shop" shop
               a class="search" search
         main
+          section.home
+            button class='arrow left' left
+            .row class='center-md'
+              .col-md-6
+                .slogan Unique and Modern Design
+                h1 Portfolio PSD Template 
+                .description Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                button Get started
+            .row class='center-md'
+              nav class='col-md-2'
+                a href="#" 1
+                a href="#" class='selected' 2
+                a href="#" 3
+                a href="#" 4
+                a href="#" 5
+            button class='arrow left' right
+          section.services
+            .row
+              ruby:
+                service_item = [
+                  {'icon' => 'design', 'header' => 'Web & App Design', 'description' => 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.'},
+                  {'icon' => 'development', 'header' => 'Development', 'description' => 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.'},
+                  {'icon' => 'customization', 'header' => 'Customization', 'description' => 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.'},
+                  {'icon' => 'marketing', 'header' => 'Marketing', 'description' => 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.'}
+                ]
+              - service_item.each do |item|
+                  div class='col-md-3'
+                      .serivce-item
+                          .icon(class="#{item['icon']}") icon
+                          .title #{item['header']}
+                          .description #{item['description']}
+          section.realization
+            .row class='center-md'
+              article class='col-md-8'
+                h2 Waxom is Realization of your Ideas.
+                p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+            .row class='no-gutter'
+              .preview
+                img src="" alt="" preview
+          section.banner
+            .row class='between-md'
+              .col-md-6
+                h3 <span> Waxom </span> Multipurpose WordPress Theme
+                .text Don't Forget to Rate the Template. Thanks so much!
+              .col-md-2
+                button Purchase now
+          section.projects
+            .row class='center-md'
+              article class='col-md-8'
+                h2 Waxom is Realization of your Ideas.
+                p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+            .row class='center-md'
+              nav.filter class='col-md-6'
+                button class='outline selected' All
+                button class='outline' Web Design
+                button class='outline' Mobile App
+                button class='outline' Illustration
+                button class='outline' Photography
+            .row 
+              ruby:
+                project_item = [
+                  {'image' => '#', 'header' => 'Claritas Etiam Processus', 'description' => 'Photography, Nature'},
+                  {'image' => '#', 'header' => 'Quam Nutamus Farum', 'description' => 'Graphic Design, Mock-Up'},
+                  {'image' => '#', 'header' => 'Usus Legentis Videntur', 'description' => 'Photography, Holiday'},
+                  {'image' => '#', 'header' => 'Claritas Etiam Processus', 'description' => 'Photography, Nature'},
+                  {'image' => '#', 'header' => 'Quam Nutamus Farum', 'description' => 'Graphic Design, Mock-Up'},
+                  {'image' => '#', 'header' => 'Usus Legentis Videntur', 'description' => 'Photography, Holiday'},
+                ]
+              - project_item.each do |item|
+                  div class='col-md-4'
+                      .project-item
+                          .photo
+                            img src="#{item['image']}" alt="" icon
+                          .title #{item['header']}
+                          .description #{item['description']}
+            .row class='center-md'
+              button Load more
+          section.video
+            img src="" alt="" video
+            .row class='center-md'
+              article class='col-md-6'
+                button class='play' play
+                h2 Waxom Video Presentation
+                p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
+                time 03:26
+          section.mobile
+             .row class='end-md'
+                article class='col-md-7'
+                  h2 Excellent for Mobile Devices.
+                  p Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+             .row class='end-md'
+                article class='col-md-7'
+                  ul
+                    li Nam liber tempor cum soluta nobis eleifend option;
+                    li Option congue nihil imperdiet doming id quod mazim placerat facer;
+                    li Eodem modo typi, qui nunc nobis videntur parum futurum;
+                    li Investigationes demonstraverunt lectores
+          section.counters
+            .row class='center-md'
+              ruby:
+                counter_item = [
+                  {'icon' => 'clients', 'count' => '3587', 'description' => 'Satisfied clients'},
+                  {'icon' => 'cups', 'count' => '207', 'description' => 'Cups of coffee'},
+                  {'icon' => 'posts', 'count' => '2500', 'description' => 'Blog posts'},
+                  {'icon' => 'likes', 'count' => '873', 'description' => 'Likes'},
+                  {'icon' => 'laucned', 'count' => '900', 'description' => 'We launched'}
+                ]
+              - counter_item.each do |item|
+                  div class='col-md-2'
+                      .counter-item
+                          .icon(class="#{item['icon']}") icon
+                          .count #{item['count']}
+                          .description #{item['description']}
+          section.posts
+            .row class='center-md'
+              article class='col-md-8'
+                h2 Recent Posts.
+                p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+            .row class='center-md'
+              ruby:
+                post_item = [
+                  {'image' => '#', 'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
+                  {'image' => '#', 'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
+                  {'image' => '#', 'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
+                ]
+              - post_item.each do |item|
+                  div class='col-md-4'
+                      .post-item
+                          .photo
+                            img src="#{item['image']}" alt="" icon
+                            time
+                              .day #{item['day']}
+                              .month #{item['month']}
+                          .title #{item['header']}
+                          .description #{item['description']}
+                          a href="#" Read more
+              .col-md-2
+                button class='circle-arrow left' left 
+                button class='circle-arrow left' right 
+          section.partners
+            .row
+              .col-md-3
+                img src="#" alt="" image
+              .col-md-3
+                img src="#" alt="" image
+              .col-md-3
+                img src="#" alt="" image
+              .col-md-3
+                img src="#" alt="" image
         footer
+          .row
+            .about class='col-md-3'
+              .logo
+                img src="#" alt="" logo
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+              a href="#" Read more
+            .posts class='col-md-3'
+              p3 Recent Posts
+              ruby:
+                post_item = [
+                  {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit'},
+                  {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Diam nonummy nibh euismod tincidunt ut laoreet dolore magna'},
+                  {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima'},
+                ]
+              - post_item.each do |item|
+                .post-item
+                    time
+                      span.month #{item['month']}
+                      span.day #{item['day']},
+                      span.year #{item['year']} 
+                    .title #{item['header']}
+            .twitter class='col-md-3'
+              p3 Our Twitter
+              .twit-item
+                .text <span>@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                time 3 mins ago
+              .twit-item
+                .text Mirum est <span>#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+                time 5 hours ago
+              .twit-item
+                .text Soluta nobis option <a href="#">bit.ly/1Hniso7</a>
+                time 20 days ago
+            .dribbble class='col-md-3'
+              p3 Dribbble Widget
+              .row class='no-gutter'
+                .drib-widget class='col-md-6'
+                  img src="#" alt="" image
+                .drib-widget class='col-md-6'
+                  img src="#" alt="" image
+                .drib-widget class='col-md-6'
+                  img src="#" alt="" image
+                .drib-widget class='col-md-6'
+                  img src="#" alt="" image
+          .row class='between-md'
+            .copyright class='col-md-5'
+              a href="#" Copyright © 2015 <span>Waxom</span>
+              a href="#" Privacy Policy  
+              a href="#" FAQ    
+              a href="#" Support 
+            .author
+              a href="#" Designed by <span>ThemeFire</span>
+              a href="#" Only on <span>Envato Marke</span>
         script src="js/lib.js"
         script src="js/bundle.js"
         
