@@ -8,15 +8,18 @@ html lang='en'
         title Waxom Site
     body
         header
-          .logo
-            img src="" alt="" logo
-          nav.menu
-            - menu_arr = ['Home','About us', 'Portfolio', 'Features', 'Blog', 'Pricing', 'Shortcodes','Contact']
-            - menu_arr.each do |item|
-              a href="##{item}" #{item}
-          .adittion
-            a class="shop" shop
-            a class="search" search
+          .row
+            .logo class = "col-md-4"
+              img src="" alt="" logo
+            nav.menu class = "col-md-7"
+              - menu_arr = ['Home','About us', 'Portfolio', 'Features', 'Blog', 'Pricing', 'Shortcodes','Contact']
+              - menu_arr.each do |item|
+                a href="##{item}" #{item}
+            .adittion class = "col-md-1"
+              a class="shop" shop
+              a class="search" search
         main
         footer
+        script src="js/lib.js"
         script src="js/bundle.js"
+        
