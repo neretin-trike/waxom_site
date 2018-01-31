@@ -1,0 +1,22 @@
+﻿doctype 5
+html lang='en'
+    head
+        meta charset='UTF-8'
+        meta content='wclassth=device-wclassth, initial-scale=1.0'
+        meta http-equiv='X-UA-Compatible' content='ie=edge'
+        link rel="stylesheet" href="css/avalanche.css"/
+        title Waxom Site
+    body
+        header
+          .logo
+            img src="" alt="" logo
+          nav.menu
+            - menu_arr = ['Home','About us', 'Portfolio', 'Features', 'Blog', 'Pricing', 'Shortcodes','Contact']
+            - menu_arr.each do |item|
+              a href="##{item}" #{item}
+          .adittion
+            a class="shop" shop
+            a class="search" search
+        main
+        footer
+        script src="js/bundle.js"

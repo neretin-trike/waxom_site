@@ -1,0 +1,17 @@
+base-markup-for-pages(pt = 0, pb = 0, bcolor =  #fff, bpath = '')
+    padding-top  pt
+    padding-bottom  pb
+
+    background-color  bcolor
+
+    if  bpath != ''
+        background-image url(bpath)
+        background-size cover
+
+    position relative
+    height 100%
+
+reset()
+    padding 0
+    margin 0
+
