@@ -483,4 +483,47 @@ header
             background-position 5rem -3.4rem
             background-image url(/app/images/arrows.png)
 
-        
+/*--------------------------------
+------------ COUNTERS ------------
+--------------------------------*/
+
+.counters
+    base-markup-for-pages(7em, 6rem, black)
+    background-image linear-gradient(to right, #211b19, #4e3427)
+    color color-white
+
+    .counter-item
+        .icon
+            width 6rem
+            height @width
+            margin 0 auto
+
+            background-position center
+            background-repeat no-repeat
+
+            file-names = clients, cups, posts, likes,launhced
+            for name in file-names
+                &.{name}
+                    background-image url("/app/images/counters/"+name+".png")
+
+        .count
+            margin-top 1.8rem
+            margin-bottom 1rem
+
+            font-weight font-weight-extralight
+            font-size 4.8rem
+
+        .description
+            text-transform uppercase
+            color color-brown
+
+            &:after
+                content ''
+                display block
+                margin 0 auto
+                margin-top 3rem
+                width 3rem
+                height 0.2rem
+
+                background-color color-white
+
