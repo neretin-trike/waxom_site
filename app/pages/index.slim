@@ -143,30 +143,39 @@ html lang='en'
                           .description #{item['description']}
           section.posts
             .row class='center-md'
-              article class='col-md-8'
+              article class='col-md-7'
                 h2 Recent Posts.
                 p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
-            .row class='center-md'
+            .row
               ruby:
                 post_item = [
-                  {'image' => '#', 'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
-                  {'image' => '#', 'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
-                  {'image' => '#', 'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
+                  {'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
+                  {'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
+                  {'day' => '30', 'month' => 'Sep.' , 'header' => 'Lorem ipsum dolor sit amet', 'description' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.'},
                 ]
-              - post_item.each do |item|
+              - post_item.each_with_index do |item, index|
                   div class='col-md-4'
                       .post-item
-                          .photo
-                            img src="#{item['image']}" alt="" icon
-                            time
+                          figure.photo
+                            img src="images/posts/photo_#{index+1}.png" alt=""
+                            .time
                               .day #{item['day']}
                               .month #{item['month']}
-                          .title #{item['header']}
-                          .description #{item['description']}
-                          a href="#" Read more
+                            - if index == 0
+                              nav class='circle-switcher'
+                                a href="#"
+                                a href="#" class='selected'
+                                a href="#" 
+                                a href="#" 
+                                a href="#" 
+                          figcaption
+                            .title #{item['header']}
+                            .description #{item['description']}
+                            a href="#" Read More
+            .row class='center-md'
               .col-md-2
-                button class='circle-arrow left' left 
-                button class='circle-arrow left' right 
+                button class='circle-arrow left'  
+                button class='circle-arrow right'  
           section.partners
             .row
               .col-md-3
