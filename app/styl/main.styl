@@ -17,7 +17,7 @@ body
 *:before
 *:after 
     box-sizing: inherit
-    border 0.1rem solid #a2a1bf 
+    // border 0.1rem solid #a2a1bf 
 
 button
     outline none
@@ -522,3 +522,106 @@ header
 
         &.left
             transform scaleX(-1)
+
+/*--------------------------------
+------------ PARTNERS ------------
+--------------------------------*/
+
+.partners
+    base-markup-for-pages(13.5rem,13.5rem,,'/app/images/partners_background.jpg')
+
+    text-align center
+
+    img
+        max-width 100%
+
+/*--------------------------------
+------------- FOOTER -------------
+--------------------------------*/
+
+footer
+
+    h3
+        margin-bottom 2.4rem
+
+        font-family 'Raleway'
+        font-size 2.4rem
+        color color-white
+
+    .info
+        base-markup-for-pages(8rem,8rem,#191919)
+
+        .about
+            p
+                margin 2.2rem 0
+
+            a
+                font-weight font-weight-regular
+                color color-white
+                padding-right 2.5rem
+
+                background-repeat no-repeat
+                background-position 7rem 0.1rem
+                background-image url(/app/images/arrows.png)
+        
+        .post-item, .twit-item
+            border-bottom 0.1rem solid #252525
+            margin-bottom 1.5rem
+
+            &:last-child
+                border none
+            
+            &:hover
+                .title, .text
+                    color color-brown
+
+            time
+                display inline-block
+                font-size 1.2rem
+                color #363636
+            .title
+                margin-top 1rem
+                margin-bottom  1.5rem
+
+                line-height 2rem
+        
+        .twit-item
+            time
+                margin-top 0.7rem
+                margin-bottom 2rem
+            
+            span 
+                color #00bff3
+            a 
+                color #959595
+
+        .drib-widget
+            overflow hidden
+            height 9.8rem
+            margin-bottom 1.5rem
+
+            img
+                max-width 130%
+
+
+    .bottom-bar
+        base-markup-for-pages(5rem,5rem,#111111)
+
+        font-size 1.3rem
+
+        a
+            color color-gray
+
+            &:hover
+                color color-brown
+                
+                &:after
+                    color color-gray
+
+            &:not(:last-child):after
+                content '|'
+                padding 0 1rem
+
+            span 
+                color #959595
+            

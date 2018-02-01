@@ -177,68 +177,59 @@ html lang='en'
                 button class='circle-arrow left'  
                 button class='circle-arrow right'  
           section.partners
-            .row
-              .col-md-3
-                img src="#" alt="" image
-              .col-md-3
-                img src="#" alt="" image
-              .col-md-3
-                img src="#" alt="" image
-              .col-md-3
-                img src="#" alt="" image
+            .overlay
+            .row class='middle-md'
+              - (1..4).each do |i|
+                .col-md-3
+                  .logo
+                    img src="images/partners/logo_#{i}.png" alt="" 
         footer
-          .row
-            .about class='col-md-3'
-              .logo
-                img src="#" alt="" logo
-              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
-              a href="#" Read more
-            .posts class='col-md-3'
-              p3 Recent Posts
-              ruby:
-                post_item = [
-                  {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit'},
-                  {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Diam nonummy nibh euismod tincidunt ut laoreet dolore magna'},
-                  {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima'},
-                ]
-              - post_item.each do |item|
-                .post-item
-                    time
-                      span.month #{item['month']}
-                      span.day #{item['day']},
-                      span.year #{item['year']} 
-                    .title #{item['header']}
-            .twitter class='col-md-3'
-              p3 Our Twitter
-              .twit-item
-                .text <span>@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
-                time 3 mins ago
-              .twit-item
-                .text Mirum est <span>#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
-                time 5 hours ago
-              .twit-item
-                .text Soluta nobis option <a href="#">bit.ly/1Hniso7</a>
-                time 20 days ago
-            .dribbble class='col-md-3'
-              p3 Dribbble Widget
-              .row class='no-gutter'
-                .drib-widget class='col-md-6'
-                  img src="#" alt="" image
-                .drib-widget class='col-md-6'
-                  img src="#" alt="" image
-                .drib-widget class='col-md-6'
-                  img src="#" alt="" image
-                .drib-widget class='col-md-6'
-                  img src="#" alt="" image
-          .row class='between-md'
-            .copyright class='col-md-5'
-              a href="#" Copyright © 2015 <span>Waxom</span>
-              a href="#" Privacy Policy  
-              a href="#" FAQ    
-              a href="#" Support 
-            .author
-              a href="#" Designed by <span>ThemeFire</span>
-              a href="#" Only on <span>Envato Marke</span>
+          .info
+            .row
+              .about class='col-md-3'
+                .logo
+                  img src="images/logo.png" alt=""
+                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+                a href="#" Read more
+              .resent-posts class='col-md-3'
+                h3 Recent Posts
+                ruby:
+                  post_item = [
+                    {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit'},
+                    {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Diam nonummy nibh euismod tincidunt ut laoreet dolore magna'},
+                    {'month' => '08', 'day' => 'September', 'year' => '2015', 'header' => 'Claritas est etiam processus dynamicus, qui sequitur mutationem per seacula quarta decima'},
+                  ]
+                - post_item.each do |item|
+                  .post-item
+                      time #{item['month']} #{item['day']} #{item['year']} 
+                      .title #{item['header']}
+              .twitter class='col-md-3'
+                h3 Our Twitter
+                .twit-item
+                  .text <span>@waxom</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                  time 3 mins ago
+                .twit-item
+                  .text Mirum est <span>#envato</span> notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum
+                  time 5 hours ago
+                .twit-item
+                  .text Soluta nobis option <a href="#">bit.ly/1Hniso7</a>
+                  time 20 days ago
+              .dribbble class='col-md-3'
+                h3 Dribbble Widget
+                .row class='no-gutter'
+                  - (1..4).each do |i|
+                    .drib-widget class='col-md-6'
+                      img src="images/twitter/photo_#{i}.png" alt="" 
+          .bottom-bar
+            .row class='between-md'
+              .copyright class='col-md-5'
+                a href="#" Copyright © 2015 <span>Waxom</span>
+                a href="#" Privacy Policy  
+                a href="#" FAQ    
+                a href="#" Support 
+              .author
+                a href="#" Designed by <span>ThemeFire</span>
+                a href="#" Only on <span>Envato Marke</span>
         script src="js/lib.js"
         script src="js/bundle.js"
         
