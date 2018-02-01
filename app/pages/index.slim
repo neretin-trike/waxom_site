@@ -8,16 +8,16 @@ html lang='en'
         title Waxom Site
     body
         header
-          .row
-            .logo class="col-md-4"
-              img src="" alt="" logo
-            nav.menu class="col-md-7"
+          .row class='middle-md'
+            .logo class="col-md-4 no-gutter"
+              img src="images/logo.png" alt="" 
+            nav.menu class="col-md-7  no-gutter"
               - menu_arr = ['Home','About us', 'Portfolio', 'Features', 'Blog', 'Pricing', 'Shortcodes','Contact']
               - menu_arr.each do |item|
                 a href="##{item}" #{item}
             .adittion class="col-md-1"
-              a class="shop" shop
-              a class="search" search
+              a class="shop"
+              a class="search"
         main
           section.home
             button class='arrow left' left

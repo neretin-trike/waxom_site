@@ -69,6 +69,9 @@ button
 
     margin 0 auto
 
+main
+    margin-top -14.7rem
+
 .row
     margin 0 auto
     max-width 120rem
@@ -84,10 +87,52 @@ button
     padding-left 1.5rem
     padding-right 1.5rem
 
+    &.no-gutter
+        padding-left 0
+        padding-right 0 
+
 
 /*-------------------------------
 ------------ HEADER -------------
 -------------------------------*/
+header
+    base-markup-for-pages(4rem, 4rem, transparent)
+
+    position relative
+    z-index 999
+
+    .menu
+        display flex
+        justify-content space-around
+
+        a
+            color color-white
+            font-weight font-weight-light
+
+            &:hover
+                color color-brown
+    
+    .adittion
+        display flex
+        justify-content space-between
+        a
+            width 2.6rem
+            height @width
+            
+            background-position center
+            background-repeat no-repeat
+
+            &.shop
+                background-image url(/app/images/shop.png)
+            &.search
+                background-image url(/app/images/search.png)
+
+/*-------------------------------
+------------- HOME --------------
+-------------------------------*/
+
+.home
+    base-markup-for-pages(38rem, 4rem, black)
 
 .filter
     display flex
