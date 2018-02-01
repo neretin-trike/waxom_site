@@ -17,7 +17,7 @@ body
 *:before
 *:after 
     box-sizing: inherit
-    border 0.1rem solid #a2a1bf 
+    // border 0.1rem solid #a2a1bf 
 
 button
     outline none
@@ -52,10 +52,18 @@ h1, h2, h3, p, blockquote, figure
     opacity 0.7
 
 h2
-    text-transform uppercase
-    text-align center !important
-    font-size 3.2rem
+    margin-bottom 2rem
+
+    text-align center
+    font-family 'Raleway'
+    font-size 3rem
+    font-weight font-weight-semibold
     color color-gray
+
+p
+    fonts-size 1.6rem
+    color color-lightgray
+    line-height 2.4rem
 
 button
     position relative
@@ -99,7 +107,6 @@ main
 
             border 0.2rem solid color-brown
             background-color transparent
-
 
 .row
     position relative
@@ -211,6 +218,66 @@ header
         &.right
             right 15rem
             transform scaleX(-1)
+
+/*--------------------------------
+------------- SERVICES -----------
+--------------------------------*/
+
+.services
+    base-markup-for-pages(8rem, 9rem)
+
+    .serivce-item
+        text-align center
+
+        &.selected
+            .title
+                color color-brown
+            .description
+                &:after
+                    background-color color-brown
+
+        .icon
+            margin 0 auto
+            width 6.4rem
+            height 6.4rem
+
+            background-repeat no-repeat
+            background-position center
+
+            file-names = design, development, customization, marketing
+            for name in file-names
+                &.{name}
+                    background-image url("/app/images/services/"+name+".png")
+        
+        .title
+            margin  1.2rem 0
+            font-family 'Raleway'
+            font-weight font-weight-semibold
+            font-size 2.2rem
+
+        .description
+            line-height 2.4rem
+
+            &:after
+                content ''
+                display block
+                margin 0 auto
+                margin-top 2.8rem
+                width 7rem
+                height 0.2rem
+                background-color #f1eee9
+
+/*--------------------------------
+----------- REALIZATION ----------
+--------------------------------*/
+
+.realization
+    base-markup-for-pages(6.5rem)
+
+    .preview
+        margin-top 4rem
+        img 
+            max-width 100%
 
 .filter
     display flex

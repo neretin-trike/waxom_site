@@ -45,20 +45,24 @@ html lang='en'
                   {'icon' => 'customization', 'header' => 'Customization', 'description' => 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.'},
                   {'icon' => 'marketing', 'header' => 'Marketing', 'description' => 'Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.'}
                 ]
-              - service_item.each do |item|
-                  div class='col-md-3'
-                      .serivce-item
-                          .icon(class="#{item['icon']}") icon
-                          .title #{item['header']}
-                          .description #{item['description']}
+              - service_item.each_with_index do |item, index|
+                - if index == 1
+                  - selected_class = 'selected'
+                - else
+                  - selected_class = ''
+                div class='col-md-3'
+                    .serivce-item class='#{selected_class}'
+                        .icon(class="#{item['icon']}")
+                        .title #{item['header']}
+                        .description #{item['description']}
           section.realization
             .row class='center-md'
-              article class='col-md-8'
+              article class='col-md-7'
                 h2 Waxom is Realization of your Ideas.
                 p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
             .row class='no-gutter'
               .preview
-                img src="" alt="" preview
+                img src="images/preview.png" alt=""
           section.banner
             .row class='between-md'
               .col-md-6
