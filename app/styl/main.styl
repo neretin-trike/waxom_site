@@ -411,3 +411,44 @@ header
     button
         margin-top 4rem 
         
+/*--------------------------------
+-------------- VIDEO -------------
+--------------------------------*/
+
+.video
+    base-markup-for-pages(20.5rem,20rem)
+
+    position relative
+    overflow hidden
+
+    .overlay
+        opacity 0.5
+
+    h2,p
+        color color-white
+
+    img 
+        top 0
+        left 0
+        position absolute
+        object-fit cover
+
+    .play
+        margin-bottom 3.5rem
+
+        min-width 0
+        border-radius big-border-radius
+        width 10rem
+        height @width
+        box-shadow none 
+
+        background-color: rgba(black, 20%)
+        background-position center
+        background-repeat no-repeat
+        background-image url(/app/images/play.png)
+
+    time
+        display inline-block
+        margin-top 3.5rem
+        font-weight font-weight-regular
+        color color-brown
