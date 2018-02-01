@@ -17,7 +17,7 @@ body
 *:before
 *:after 
     box-sizing: inherit
-    // border 0.1rem solid #a2a1bf 
+    border 0.1rem solid #a2a1bf 
 
 button
     outline none
@@ -276,8 +276,31 @@ header
 
     .preview
         margin-top 4rem
+        margin-bottom -0.4rem
+        
         img 
             max-width 100%
+
+/*--------------------------------
+-------------- BANNER ------------
+--------------------------------*/
+
+.banner
+    base-markup-for-pages(4.5rem,4.5rem, black)
+    background-image linear-gradient(to right, #211b19, #4e3427)
+    color color-white
+    h3
+        font-family 'Raleway'
+        font-weight font-weight-regular
+        font-size 2.8rem
+        span 
+            color color-brown
+
+    .text 
+        margin-top 0.5rem
+        font-size 1.8rem
+        color #615855
+
 
 .filter
     display flex
