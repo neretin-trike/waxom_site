@@ -72,11 +72,11 @@ html lang='en'
                 button Purchase now
           section.projects
             .row class='center-md'
-              article class='col-md-8'
+              article class='col-md-7'
                 h2 Waxom is Realization of your Ideas.
                 p Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
             .row class='center-md'
-              nav.filter class='col-md-6'
+              nav.filter class='col-md-6  no-gutter'
                 button class='outline selected' All
                 button class='outline' Web Design
                 button class='outline' Mobile App
@@ -85,20 +85,24 @@ html lang='en'
             .row 
               ruby:
                 project_item = [
-                  {'image' => '#', 'header' => 'Claritas Etiam Processus', 'description' => 'Photography, Nature'},
-                  {'image' => '#', 'header' => 'Quam Nutamus Farum', 'description' => 'Graphic Design, Mock-Up'},
-                  {'image' => '#', 'header' => 'Usus Legentis Videntur', 'description' => 'Photography, Holiday'},
-                  {'image' => '#', 'header' => 'Claritas Etiam Processus', 'description' => 'Photography, Nature'},
-                  {'image' => '#', 'header' => 'Quam Nutamus Farum', 'description' => 'Graphic Design, Mock-Up'},
-                  {'image' => '#', 'header' => 'Usus Legentis Videntur', 'description' => 'Photography, Holiday'},
+                  {'header' => 'Claritas Etiam Processus', 'description' => 'Photography, Nature'},
+                  {'header' => 'Quam Nutamus Farum', 'description' => 'Graphic Design, Mock-Up'},
+                  {'header' => 'Usus Legentis Videntur', 'description' => 'Photography, Holiday'},
+                  {'header' => 'Claritas Etiam Processus', 'description' => 'Photography, Nature'},
+                  {'header' => 'Quam Nutamus Farum', 'description' => 'Graphic Design, Mock-Up'},
+                  {'header' => 'Usus Legentis Videntur', 'description' => 'Photography, Holiday'},
                 ]
-              - project_item.each do |item|
+              - project_item.each_with_index do |item, index|
                   div class='col-md-4'
                       .project-item
-                          .photo
-                            img src="#{item['image']}" alt="" icon
-                          .title #{item['header']}
-                          .description #{item['description']}
+                          figure.photo
+                            img src="images/projects/photo_#{index+1}.png" alt=""
+                            .controls
+                              a href="#" class='link' 
+                              a href="#" class='zoom' 
+                          figcaption
+                            .title #{item['header']}
+                            .description #{item['description']}
             .row class='center-md'
               button Load more
           section.video
